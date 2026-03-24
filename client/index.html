@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Own ChatGPT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>Settings</h2>
+
+      <label for="modelSelect">Model</label>
+      <select id="modelSelect">
+        <option value="gpt-4.1-mini">gpt-4.1-mini</option>
+        <option value="gpt-4.1">gpt-4.1</option>
+      </select>
+
+      <label for="systemPrompt">System Prompt</label>
+      <textarea id="systemPrompt" rows="6" placeholder="You are a helpful assistant.">You are a helpful assistant.</textarea>
+
+      <label for="temperature">Temperature: <span id="tempValue">0.7</span></label>
+      <input type="range" id="temperature" min="0" max="2" step="0.1" value="0.7" />
+
+      <button id="clearBtn">Clear Chat</button>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <h1>Chatting Guide</h1>
+      </header>
+
+      <section id="chatBox" class="chat-box">
+        <div class="message bot">
+          <div class="bubble">Hello! I am your guide, you can talk anything here.</div>
+        </div>
+      </section>
+
+      <footer class="input-area">
+        <input type="text" id="userInput" placeholder="Type your message..." />
+        <button id="sendBtn">Send</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
