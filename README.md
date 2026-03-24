@@ -56,16 +56,11 @@ OPENAI_API_KEY=your_api_key_here
 
 ## 🚀 How to Run
 
-### 1. Backend
-
 ```bash
 cd server
 npm install
 npm start
 
-### 2. Frontend
-
-```bash
 cd client
 python3 -m http.server 5500
 Open in browser: https://drive.google.com/xxxx
