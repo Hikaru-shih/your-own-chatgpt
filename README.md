@@ -12,9 +12,12 @@ Users can not only chat with the AI, but also control its behavior using customi
 - 💬 Chat interface with real-time responses
 - 🎭 Custom system prompt (control AI role and behavior)
 - 🌡️ Temperature control (adjust creativity)
-- 🧠 Short-term conversation memory
+- 🧠 Long-term memory (stored using localStorage)
 - 🎨 Themed UI (Dungeon-style interface)
-
+- 🤖 Auto routing between models (simple vs complex queries)
+- 🛠 Tool use (time & calculator without LLM)
+- 🖼 Multimodal input (image upload & description)
+- 📝 Markdown rendering for AI responses
 ---
 
 ## 🏗️ System Architecture
@@ -31,15 +34,20 @@ Users can not only chat with the AI, but also control its behavior using customi
 ### API
 - OpenAI API (LLM response generation)
 
+- Model routing and tool execution logic
+
 ---
 
 ## 🔄 How It Works
 
 1. User enters a message in the frontend
 2. The message is sent to the backend server
-3. The backend calls the OpenAI API
-4. The AI response is returned to the frontend
-5. The frontend displays the response
+3. The backend checks:
+   - Tool usage
+   - Model routing
+4. If needed, the backend calls the OpenAI API
+5. The AI response is returned to the frontend
+6. The frontend displays the response
 
 ---
 
@@ -63,6 +71,17 @@ npm start
 
 cd client
 python3 -m http.server 5500
-Open in browser: https://drive.google.com/xxxx
+Open in browser: http://localhost:5500
 
 ---
+
+## 📊 HW2 Improvements
+
+Compared to Homework 01, this version adds:
+
+- Long-term memory
+- Auto model routing
+- Tool execution
+- Multimodal image input
+
+These features make the chatbot more intelligent and efficient.
