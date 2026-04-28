@@ -13,6 +13,7 @@
 
       <label for="modelSelect">Model</label>
       <select id="modelSelect">
+        <option value="auto">Auto Routing</option>
         <option value="gpt-4.1-mini">gpt-4.1-mini</option>
         <option value="gpt-4.1">gpt-4.1</option>
       </select>
@@ -23,6 +24,10 @@
       <label for="temperature">Temperature: <span id="tempValue">0.7</span></label>
       <input type="range" id="temperature" min="0" max="2" step="0.1" value="0.7" />
 
+      <label for="imageInput">Image Upload</label>
+      <input type="file" id="imageInput" accept="image/*" />
+
+      <button id="clearImageBtn">Clear Image</button>
       <button id="clearBtn">Clear Chat</button>
     </aside>
 
@@ -44,6 +49,7 @@
     </main>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
